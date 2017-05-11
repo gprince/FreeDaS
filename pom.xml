@@ -111,6 +111,7 @@
                         <excludes>
                             <exclude>**/Abstract*.java</exclude>
                         </excludes>
+                        <argLine>-Dnet.sf.ehcache.disabled=true</argLine>
                     </configuration>
                 </plugin>
 
