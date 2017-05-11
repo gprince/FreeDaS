@@ -4,9 +4,8 @@ import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
 
 /**
- * <h1>The FreeDaS SpringBootApplication</h1>
+ * <h1>The FreeDaS API SpringBootApplication</h1>
  */
-
 @SpringBootApplication
 open class Application
 
