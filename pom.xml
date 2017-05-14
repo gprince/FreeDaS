@@ -36,6 +36,7 @@
         <coveralls-maven-plugin.version>4.3.0</coveralls-maven-plugin.version>
         <jacoco.version>0.7.9</jacoco.version>
 
+        <hamkrest.version>1.4.0.0</hamkrest.version>
     </properties>
 
     <dependencyManagement>
@@ -82,6 +83,13 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-test</artifactId>
                 <version>${spring-boot.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>com.natpryce</groupId>
+                <artifactId>hamkrest</artifactId>
+                <version>${hamkrest.version}</version>
                 <scope>test</scope>
             </dependency>
         </dependencies>
