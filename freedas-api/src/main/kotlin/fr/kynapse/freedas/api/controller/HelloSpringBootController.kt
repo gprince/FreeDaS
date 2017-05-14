@@ -1,7 +1,7 @@
 package fr.kynapse.freedas.api.controller
 
+import fr.kynapse.freedas.api.model.Message
 import io.swagger.annotations.Api
-import io.swagger.annotations.ApiOperation
 import org.springframework.stereotype.Controller
 import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.RequestMapping
@@ -16,12 +16,7 @@ import org.springframework.web.bind.annotation.ResponseBody
 @Api(value = "Hello from FreeDaS", tags = arrayOf("Hello from FreeDaS"), description = "Simple foo Controller to say Hello from FreeDaS :smile:")
 class HelloSpringBootController {
 
-    @RequestMapping(value = "/{name}", method = arrayOf(GET))
+    @RequestMapping(value = "/{name}", method = arrayOf(GET), produces = arrayOf("application/json; charset=UTF-8"))
     @ResponseBody
-    @ApiOperation(
-            value = "Say Hello",
-            response = String::class,
-            tags = arrayOf("hello", "fun")
-    )
-    fun sayHello(@PathVariable("name") name: String) = "Hello $name from FreeDaS"
+    fun sayHello(@PathVariable("name") name: String): Message = Message("Hello $name from FreeDaS")
 }
